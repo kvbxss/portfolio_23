@@ -9,8 +9,8 @@ const TopLine = () => {
             <TopLineLeft>
                 <TopLineLeftItem>
                 <Logo src={lens}/>
-                Portfolio
-                </TopLineLeftItem>
+                &lt; portfolio /&gt;
+            </TopLineLeftItem>
             </TopLineLeft>
 
             <TopLineTitle>
