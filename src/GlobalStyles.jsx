@@ -1,7 +1,9 @@
 import {createGlobalStyle} from 'styled-components';
 import bg from './assets/bg.png';
 
+
 export const GlobalStyle = createGlobalStyle`
+
     * {
         margin: 0;
         padding: 0;
