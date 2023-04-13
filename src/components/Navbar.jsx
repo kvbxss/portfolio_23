@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+
 const Navbar = () => {
   return (
     <NavbarContainer>
-      
-        <NavElement>
+        <NavElement href='#works'>
           <Number>
             01
           </Number>
@@ -12,8 +12,7 @@ const Navbar = () => {
             Works
           </Text>
         </NavElement>
-      
-        <NavElement>
+        <NavElement href='#expertise'>
           <Number>
             02
           </Number>
@@ -22,7 +21,7 @@ const Navbar = () => {
           </Text>
         </NavElement>
      
-        <NavElement>
+        <NavElement href='#honors'>
           <Number>
             03
           </Number>
@@ -31,7 +30,7 @@ const Navbar = () => {
           </Text>
           </NavElement>
        
-          <NavElement>
+          <NavElement href='#contact'>
           <Number>
             04
           </Number>
@@ -58,12 +57,19 @@ const NavbarContainer = styled.div`
     gap: 25px;
     padding: 0 112px;`
 
-const NavElement = styled.div`
+const NavElement = styled.a`
       width: hug-content;
       height: hug-content;
-      display: flex;
+      display: inline;
       flex-direction: column;
       align-items: flex-start;
+
+      &:visited {
+        color: #000000;
+      }
+      &:active {
+        color: #000000;
+      }
       `
 const Number = styled.h1`
       font-family: 'Lato', sans-serif;
