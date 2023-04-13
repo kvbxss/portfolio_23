@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import lens from '../assets/lens.png';
+import { Link } from 'react-router-dom';
 
 const TopLine = () => {
   return (
@@ -13,10 +14,12 @@ const TopLine = () => {
             </TopLineLeftItem>
             </TopLineLeft>
 
-            <TopLineTitle>
+            <TopLineTitle href='#home'>
+                
                 <Title>
                     DOWNAROWICZ
                 </Title>
+                
             </TopLineTitle>
 
             <TopLineRight>
@@ -75,13 +78,20 @@ const Logo = styled.img`
     }
     `
 
-const TopLineTitle = styled.div`
+const TopLineTitle = styled.a`
     display: flex;
     flex-direction: row;
     gap: 8px;
     align-items: center;
     padding: 8px 0
     left: calc(50% - 243px/2 + 0.5px);
+
+    &:visited {
+        color: #000000;
+    }
+    &:active {
+        color: #000000;
+    }
 `
 
 const Title = styled.h1`
