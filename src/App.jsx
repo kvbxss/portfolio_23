@@ -1,24 +1,46 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components';
 import TopLine from './components/TopLine';
 import { GlobalStyle } from './GlobalStyles';
-import HomePage from './pages/HomePage';
-import WorksPage from './pages/WorksPage';
+import HomePage from './components/HomePage';
+import WorksPage from './components/WorksPage';
+import ExpertisePage from './components/ExpertisePage';
 
 function App() {
-    return (
-        <>
-        <TopLine />
-        <OuterWrapper>
-        <GlobalStyle></GlobalStyle>
-        <Wrapper>
-        <HomePage />
-        <WorksPage />
-        </Wrapper>
-        </OuterWrapper>
-        </>
-    );
-}
+
+    var innerWidth = window.innerWidth;
+    
+    window.addEventListener('resize', function() {
+        return innerWidth ;
+    });
+   if ( innerWidth >= 1500) {
+                return (
+                    <OuterWrapper>
+                    <GlobalStyle></GlobalStyle>
+                    <Wrapper>   
+                        <HomePage />
+                        <WorksPage/>
+                        <ExpertisePage />
+                    </Wrapper>
+                    </OuterWrapper> 
+                )
+   }
+           else if (innerWidth <= 1500 && innerWidth >= 1000) {
+                return (
+                    <>
+                    <GlobalStyle></GlobalStyle>
+                    <HomePage />
+                    <WorksPage />
+                    <ExpertisePage />
+                    </>
+                )
+           }
+            else {
+                return null;
+            }
+    }
+
 
 export default App;
 
@@ -28,6 +50,8 @@ const Wrapper = styled.div`
     flex-direction: row;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
+
+    
     `
 const OuterWrapper = styled.div`
     height: 100vw;
@@ -41,4 +65,5 @@ const OuterWrapper = styled.div`
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
         display: none;
-    }`
+    }
+    `
