@@ -3,6 +3,11 @@ import styled from 'styled-components'
 import { GlobalFonts } from '../GlobalFonts';
 import Sidebar from './Sidebar';
 import TopLine from './TopLine';
+import ImgFallback from './ImgFallback';
+import floray from '../assets/floray.webp'
+import florayF from '../assets/floray.png'
+import mncentrum from '../assets/mncentrum.webp'
+import mncentrumF from '../assets/mncentrum.jpg'
 
 const WorksPage = () => {
   return (
@@ -22,12 +27,16 @@ const WorksPage = () => {
         </TextWrapper>
         <WorksYears>
             <YearCard>
-              <ImgWrapper />
+              <ImgWrapper>
+              <ImgWithFallback src={mncentrum} fallback={mncentrumF} alt='2022' />
+              </ImgWrapper>
               2022 <br />
               4 projects
             </YearCard>
             <YearCard>
-              <ImgWrapper />
+              <ImgWrapper>
+              <ImgWithFallback src={floray} fallback={florayF} alt='2023'/>
+              </ImgWrapper>
               2023 <br />
               4 projects
             </YearCard>
@@ -53,6 +62,9 @@ const WorksWrapper = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #F5F5F5;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
 `
 
 const TextWrapper = styled.div`
@@ -91,7 +103,8 @@ const WorksYears = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 150px;`
+    gap: 150px;
+    margin-top: 84px;`
 
 const YearCard = styled.div`
     display: flex;
@@ -101,11 +114,20 @@ const YearCard = styled.div`
     height: 300px;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    font-weight: 300;`
+    font-weight: 300;
+    line-height: 1.5;`
 
 const ImgWrapper = styled.div`
     width: 250px;
     height: 250px;`
+
+
+const ImgWithFallback = styled(ImgFallback)`
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+`
 
 const SidebarWrapper = styled.div`
     width: 100vw;

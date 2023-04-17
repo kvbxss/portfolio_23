@@ -5,17 +5,16 @@ import styled from 'styled-components'
 const Sidebar = () => {
   return (
     <Side>
-      <SideElement >
+      <SideElement href='#works' >
         <Number>
           01
         </Number>
-        
         <Text>
           Works
         </Text>
       </SideElement>
       
-      <SideElement>
+      <SideElement href='#expertise'>
         <Number>
           02
         </Number>
@@ -24,7 +23,7 @@ const Sidebar = () => {
         </Text>
       </SideElement>
 
-      <SideElement>
+      <SideElement href='#honors'>
         <Number>
           03
         </Number>
@@ -33,7 +32,7 @@ const Sidebar = () => {
         </Text>
       </SideElement>
 
-      <SideElement>
+      <SideElement href='#contact'>
         <Number>
           04
         </Number>
@@ -64,7 +63,11 @@ const SideElement = styled.a`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-
+      justify-content: center;
+      padding-left: 24px;
+      &:active {
+        border-left: 4px solid #F35330;
+      }
       
       `
 const Number = styled.h1`
