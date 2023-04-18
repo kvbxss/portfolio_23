@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const Navbar = () => {
@@ -64,7 +64,7 @@ const NavElement = styled.a`
       flex-direction: column;
       align-items: flex-start;
       color: #000000;
-      
+
       &:visited {
         color: #000000;
       }
