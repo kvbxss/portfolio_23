@@ -38,7 +38,7 @@ const WorksPage = () => {
               <ImgWithFallback src={floray} fallback={florayF} alt='2023'/>
               </ImgWrapper>
               2023 <br />
-              4 projects
+              2 projects
             </YearCard>
         </WorksYears>
         <SidebarWrapper>        
@@ -61,7 +61,6 @@ const WorksWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F5F5F5;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
@@ -77,7 +76,7 @@ const TextWrapper = styled.div`
 
 const WorksTitle = styled.h1`
       font-family: 'Playfair Display', serif;
-      font-size: 112px;
+      font-size: 144px;
       color: #E1A10B;
       font-weight: 400;
       `
@@ -115,11 +114,24 @@ const YearCard = styled.div`
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.5;`
+    line-height: 1.5;
+    border-radius: 50%;
+    
+
+    `
 
 const ImgWrapper = styled.div`
     width: 250px;
-    height: 250px;`
+    height: 250px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    }
+    `
 
 
 const ImgWithFallback = styled(ImgFallback)`
@@ -127,11 +139,12 @@ const ImgWithFallback = styled(ImgFallback)`
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
+
+    
 `
 
 const SidebarWrapper = styled.div`
     width: 100vw;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;`
