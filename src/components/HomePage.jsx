@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GlobalFonts } from '../GlobalFonts';
-import selfie from '../assets/selfie.webp'
-import selfieF from '../assets/selfie.png'
-import ImgFallback from './ImgFallback';
 import Navbar from './Navbar';
 import TopLine from './TopLine';
 
@@ -26,9 +23,7 @@ const HomePage = () => {
           </Dev>
         </DevWrapper>
         <Navbar />
-        <PhotoWrapper>
-          <Photo src={selfie} fallback={selfieF} alt='selfie'/>
-        </PhotoWrapper>
+        
         
     </Home>
   )
@@ -72,15 +67,4 @@ const Dev = styled.h2`
     font-size: 64px;
     color: #E1A10B;
     font-weight: 400;
-    `
-const PhotoWrapper = styled.div`
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;`
-
-const Photo = styled(ImgFallback)`
-    height: 100%;
-    width: 564px;
-    margin-left: 112px;
-    filter: drop-shadow(20px -20px 1px rgba(225, 161, 11, 25%)); 
     `
