@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 
 const Sidebar = () => {
+
+
   return (
     <Side>
       <SideElement href='#works' >
@@ -23,12 +25,12 @@ const Sidebar = () => {
         </Text>
       </SideElement>
 
-      <SideElement href='#honors'>
+      <SideElement href='#about'>
         <Number>
           03
         </Number>
         <Text>
-          Honors
+          About
         </Text>
       </SideElement>
 
@@ -55,6 +57,7 @@ const Side = styled.div`
     width: 170px;
     z-index: 1;
     gap: 8px;
+    margin-bottom: 50px;
     `
 
 const SideElement = styled.a`
@@ -65,7 +68,12 @@ const SideElement = styled.a`
       align-items: flex-start;
       justify-content: center;
       padding-left: 24px;
+
+      &:visited {
+        color: #000000;
+      }
       &:active {
+        color: #000000;
         border-left: 4px solid #F35330;
       }
       
