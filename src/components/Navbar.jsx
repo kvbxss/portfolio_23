@@ -21,12 +21,12 @@ const Navbar = () => {
           </Text>
         </NavElement>
      
-        <NavElement href='#honors'>
+        <NavElement href='#about'>
           <Number>
             03
           </Number>
           <Text>
-            Honors
+            About
           </Text>
           </NavElement>
        
@@ -63,7 +63,8 @@ const NavElement = styled.a`
       display: inline;
       flex-direction: column;
       align-items: flex-start;
-
+      color: #000000;
+      
       &:visited {
         color: #000000;
       }
