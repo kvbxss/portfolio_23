@@ -1,13 +1,24 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React, { useCallback } from 'react'
 import styled from 'styled-components';
-import TopLine from './components/TopLine';
 import { GlobalStyle } from './GlobalStyles';
 import HomePage from './components/HomePage';
 import WorksPage from './components/WorksPage';
 import ExpertisePage from './components/ExpertisePage';
 
+import Particles from 'react-particles';
+import { loadFull } from 'tsparticles';
+import particlesConfig from './components/particles-config';
+
 function App() {
+    
+    const particlesInit = useCallback( async engine => {
+        console.log(engine);
+        await loadFull(engine);
+    })
+
+    const particlesLoaded = useCallback( async container => {
+        await console.log(container);
+    }, []);
 
     var innerWidth = window.innerWidth;
     
@@ -16,14 +27,17 @@ function App() {
     });
    if ( innerWidth >= 1500) {
                 return (
+                    <>
+                    <Particles id='tsParticles' params={particlesConfig} init={particlesInit} loaded={particlesLoaded} />
                     <OuterWrapper>
                     <GlobalStyle></GlobalStyle>
-                    <Wrapper>   
+                    <Wrapper>
                         <HomePage />
                         <WorksPage/>
-                        <ExpertisePage />
+                        <ExpertisePage /> 
                     </Wrapper>
                     </OuterWrapper> 
+                    </>
                 )
    }
            else if (innerWidth <= 1500 && innerWidth >= 1000) {
@@ -56,6 +70,7 @@ const Wrapper = styled.div`
 const OuterWrapper = styled.div`
     height: 100vw;
     width: 100vh;
+    scroll-behavior: smooth;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
     overflow-x: hidden;
