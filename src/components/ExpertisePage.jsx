@@ -4,24 +4,28 @@ import TopLine from './TopLine'
 import Sidebar from './Sidebar'
 import ImgFallback from './ImgFallback'
 
-import react from '../assets/expertise/react.webp'
-import reactF from '../assets/expertise/react.png'
-import js from '../assets/expertise/js.webp'
-import jsF from '../assets/expertise/js.png'
-import html from '../assets/expertise/html.webp'
-import htmlF from '../assets/expertise/html.png'
-import css from '../assets/expertise/css.webp'
-import cssF from '../assets/expertise/css.png'
-import style from '../assets/expertise/styled-components.webp'
-import styleF from '../assets/expertise/styled-components.png'
-import rest from '../assets/expertise/rest-api.webp'
-import restF from '../assets/expertise/rest-api.png'
-import gatsby from '../assets/expertise/gatsby.webp'
-import gatsbyF from '../assets/expertise/gatsby.png'
-import git from '../assets/expertise/git.webp'
-import gitF from '../assets/expertise/git.png'
-import figma from '../assets/expertise/figma.webp'
-import figmaF from '../assets/expertise/figma.png'
+import {
+    react, 
+    reactF,
+    js,
+    jsF,
+    html,
+    htmlF,
+    css,
+    cssF,
+    style,
+    styleF,
+    rest,
+    restF,
+    gatsby,
+    gatsbyF,
+    git,
+    gitF,
+    figma,
+    figmaF
+ } from '../assets/expertise'
+
+
 
 
 const ExpertisePage = () => {
