@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import lens from '../assets/lens.png';
-import { Link } from 'react-router-dom';
 
 const TopLine = () => {
   return (
