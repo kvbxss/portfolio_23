@@ -1,8 +1,14 @@
 import React from 'react'
+import TopLine from './TopLine'
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <About id="about">
+      <TopLine />
+      <AboutWrapper>
+        
+      </AboutWrapper>
+    </About>
   )
 }
 
