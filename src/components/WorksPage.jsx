@@ -8,14 +8,35 @@ import floray from '../assets/floray.webp'
 import florayF from '../assets/floray.png'
 import mncentrum from '../assets/mncentrum.webp'
 import mncentrumF from '../assets/mncentrum.jpg'
+import GSAP from './GSAP';
 
 const WorksPage = () => {
   return (
     <Works id="works">
     <TopLine />
+    
     <WorksWrapper>
         <GlobalFonts />
-        <TextWrapper>
+        <TitleWrapper>
+        <WorksTitle>
+            WORKS N PROJECTS
+        </WorksTitle>
+        <WorksImage>
+            
+        </WorksImage>
+        <WorksText>
+        Welcome to my WORKS section, where you can explore some of the most exciting IT frontend projects that I have worked on throughout my career. From developing user-friendly interfaces to delivering complex web applications, each project showcases my expertise in a range of frontend technologies and my commitment to delivering high-quality work.
+        </WorksText>
+        </TitleWrapper>
+        <SliderWrapper>
+            <GSAP />
+        </SliderWrapper>
+        <ScrollWrapper>
+        <WorksText>
+            Scroll down to see more...
+        </WorksText>
+        </ScrollWrapper>
+        {/* <TextWrapper>
         <WorksTitle>
             Works
         </WorksTitle>
@@ -40,11 +61,12 @@ const WorksPage = () => {
               2023 <br />
               2 projects
             </YearCard>
-        </WorksYears>
-        <SidebarWrapper>        
+        </WorksYears> */}
+        {/* <SidebarWrapper>        
           <Sidebar />
-          </SidebarWrapper>
+    </SidebarWrapper> */}
           </WorksWrapper>
+          
     </Works>
   )
 }
@@ -57,68 +79,65 @@ const Works = styled.div`
     `
 
 const WorksWrapper = styled.div`
+    float: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
+    
 `
 
-const TextWrapper = styled.div`
+const TitleWrapper = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 50px;
+    width: 25%;
+    `
+
+const WorksImage = styled.div``
+
+const SliderWrapper = styled.div`
+    float: left;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 150px;
     `
+
+const ScrollWrapper = styled.div`
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    border-left: 1px solid #E1E1E1;
+    padding-right: 20px;
+`
 
 const WorksTitle = styled.h1`
       font-family: 'Playfair Display', serif;
-      font-size: 144px;
+      font-size: 82px;
       color: #E1A10B;
       font-weight: 400;
+      line-height: 0.9;
       `
-
-const WorksTextWrapper = styled.div`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      width: 600px;
-      margin-top: 100px;`
 
 
 const WorksText = styled.p`
       font-family: 'Lato', sans-serif;
-      font-size: 24px;
+      font-size: 18px;
       color: #424242;
       font-weight: 400;
       line-height: 1.5;`
 
-const WorksYears = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    margin-top: 84px;`
 
-const YearCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height: 300px;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.5;
-    border-radius: 50%;
-    
-
-    `
 
 const ImgWrapper = styled.div`
     width: 250px;
@@ -144,7 +163,9 @@ const ImgWithFallback = styled(ImgFallback)`
 `
 
 const SidebarWrapper = styled.div`
-    width: 100vw;
+    float: right;
+    width: 10%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;`
+    justify-content: center;
+    align-items: center;
+    `
