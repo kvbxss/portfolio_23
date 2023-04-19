@@ -9,7 +9,7 @@ const TopLine = () => {
             <TopLineLeft>
                 <TopLineLeftItem>
                 <Logo src={lens}/>
-                &lt; portfolio /&gt;
+                &lt; portfolio 23' /&gt;
             </TopLineLeftItem>
             </TopLineLeft>
 
