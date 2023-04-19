@@ -22,9 +22,7 @@ const HomePage = () => {
             React Frontend Developer
           </Dev>
         </DevWrapper>
-        <Navbar />
-        
-        
+        <Navbar /> 
     </Home>
   )
 }
