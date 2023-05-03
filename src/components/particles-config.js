@@ -311,7 +311,7 @@ const particlesConfig =
       animation: {
         count: 0,
         enable: true,
-        speed: 0.25,
+        speed: 0.1,
         decay: 0,
         sync: false,
         destroy: "none",
@@ -343,7 +343,7 @@ const particlesConfig =
       animation: {
         count: 0,
         enable: false,
-        speed: 5,
+        speed: 2,
         decay: 0,
         sync: false,
         destroy: "none",
@@ -393,7 +393,7 @@ const particlesConfig =
       },
       animation: {
         enable: true,
-        speed: 60,
+        speed: 40,
         decay: 0,
         sync: false
       },
