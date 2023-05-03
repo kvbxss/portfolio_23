@@ -1,90 +1,114 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { BiHomeAlt } from "react-icons/bi"
+import { SiAboutdotme } from "react-icons/si"
+import { FaTimes, FaBars } from "react-icons/fa"
+import { GiSkills } from "react-icons/gi"
+import { BsDisplay } from "react-icons/bs"
+import { AiOutlinePhone } from "react-icons/ai"
 
 
-const Sidebar = () => {
+const Sidebar = ({isOpen, toggle}) => {
+  const [activeNav, setActiveNav] = useState('')
 
+  
 
+  const SidebarContent = () => {
+  switch (isOpen) {
+    case true:
+      return(
+        <Side isOpen={isOpen}>
+          <NavLinks href="#home" 
+                className={activeNav === '#home' ? 'active' : ''}><BiHomeAlt/></NavLinks>
+            
+                <NavLinks href="#works" onClick={() => setActiveNav('#works')} className={activeNav === '#works' ? 'active' : ''}><BsDisplay/></NavLinks>
+            
+                <NavLinks href="#expertise" onClick={() => setActiveNav('#expertise')} className={activeNav === '#expertise' ? 'active' : ''}><GiSkills/></NavLinks>
+            
+                <NavLinks href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><SiAboutdotme/></NavLinks>
+            
+                <NavLinks href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><AiOutlinePhone/></NavLinks>           
+     
+                <NavLinks onClick={toggle}><FaTimes /></NavLinks>
+
+        </Side>
+      )
+  
+      case false:
+      return(
+        <Side isOpen={isOpen}>
+        <NavButton onClick={toggle}>
+        <FaBars />
+      </NavButton>
+        </Side>
+      )
+    default:
+      break;
+  }
+}
   return (
-    <Side>
-      <SideElement href='#works' >
-        <Number>
-          01
-        </Number>
-        <Text>
-          Works
-        </Text>
-      </SideElement>
-      
-      <SideElement href='#expertise'>
-        <Number>
-          02
-        </Number>
-        <Text>
-          Expertise
-        </Text>
-      </SideElement>
-
-      <SideElement href='#about'>
-        <Number>
-          03
-        </Number>
-        <Text>
-          About
-        </Text>
-      </SideElement>
-
-      <SideElement href='#contact'>
-        <Number>
-          04
-        </Number>
-        <Text>
-          Contact
-        </Text>
-      </SideElement>
-    </Side>
+    <>
+    
+    
+      <SidebarContent />
+    
+    </>
   )
 }
 
 export default Sidebar
 
 const Side = styled.div`
+background: rgba(0, 0, 0, 0.3);
+width: max-content;
+display: block;
+padding: 0.5rem 1rem;
+z-index: 2;
+position: fixed;
+left: 95%;
+transform: translateX(-50%);
+bottom: 2rem;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+border-radius: 2rem;
+backdrop-filter: blur(15px);
+transition: 0.3s;
+`
+
+const NavButton = styled.button`
+background: transparent;
+padding: 0.9rem;
+border-radius: 50%;
+display: flex;
+color: var(--color-light);
+font-size: 1.1rem;
+transition: 0.3s;
+
+&:hover {
+    background: rgba(255, 180, 28, 0.13);
+}
+
+&:active {
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+`
+
+    const NavLinks = styled.a`
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    width: 170px;
-    z-index: 1;
-    gap: 8px;
-    margin-bottom: 50px;
-    `
+    color: var(--color-light);
+    font-size: 1.1rem;
 
-const SideElement = styled.a`
-      width: hug-content;
-      height: 150px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding-left: 24px;
+    &:hover {
+        background: rgba(255, 180, 28, 0.13);
+    }
 
-      &:visited {
-        color: #000000;
-      }
-      &:active {
-        color: #000000;
-        border-left: 4px solid #F35330;
-      }
-      
-      `
-const Number = styled.h1`
-      font-family: 'Lato', sans-serif;
-      font-size: 18px;
-      font-style: light;
-      font-weight: 300;
-      `
-const Text = styled.h1`
-      font-family: 'Lato', sans-serif;
-      font-size: 18px;
-      font-style: semi-bold;`
+    &:active {
+        background: var(--color-bg);
+        color: var(--color-white);
+    }
+`
