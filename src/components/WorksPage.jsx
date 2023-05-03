@@ -13,7 +13,7 @@ import GSAP from './GSAP';
 const WorksPage = () => {
   return (
     <Works id="works">
-    <TopLine />
+     <TopLine /> 
     
     <WorksWrapper>
         <GlobalFonts />
@@ -62,9 +62,7 @@ const WorksPage = () => {
               2 projects
             </YearCard>
         </WorksYears> */}
-        {/* <SidebarWrapper>        
-          <Sidebar />
-    </SidebarWrapper> */}
+        
           </WorksWrapper>
           
     </Works>
@@ -87,7 +85,7 @@ const WorksWrapper = styled.div`
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
-    
+
 `
 
 const TitleWrapper = styled.div`
@@ -108,6 +106,9 @@ const SliderWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overlow-x: scroll;
+    overflow-y: auto;
     `
 
 const ScrollWrapper = styled.div`
@@ -119,11 +120,13 @@ const ScrollWrapper = styled.div`
     width: 15%;
     border-left: 1px solid #E1E1E1;
     padding-right: 20px;
+
+
 `
 
 const WorksTitle = styled.h1`
       font-family: 'Playfair Display', serif;
-      font-size: 82px;
+      font-size: 60px;
       color: #E1A10B;
       font-weight: 400;
       line-height: 0.9;
