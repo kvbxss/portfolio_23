@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import lens from '../assets/lens.png';
+import { motion } from "framer-motion";
+
 
 const TopLine = () => {
+
   return (
-    <Top>
-        <TopLineContainer>
+    <Top >
+        <TopLineContainer >
+            
             <TopLineLeft>
                 <TopLineLeftItem>
                 <Logo src={lens}/>
@@ -27,6 +31,7 @@ const TopLine = () => {
                     and offers
                 </Text>
             </TopLineRight>
+          
         </TopLineContainer>
     </Top>
   )
