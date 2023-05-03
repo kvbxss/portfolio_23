@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GlobalFonts } from '../GlobalFonts';
-import Navbar from './Navbar';
 import TopLine from './TopLine';
 
 const HomePage = () => {
   return (
     <Home id='home'>
-      <TopLine />
+      <TopLine /> 
       <GlobalFonts />
       <NameWrapper>
         <Surname>
@@ -22,7 +21,11 @@ const HomePage = () => {
             React Frontend Developer
           </Dev>
         </DevWrapper>
-        <Navbar /> 
+        <TextWrapper>
+        <Text>
+          Use menu to navigate
+        </Text>
+        </TextWrapper>
     </Home>
   )
 }
@@ -66,3 +69,16 @@ const Dev = styled.h2`
     color: #E1A10B;
     font-weight: 400;
     `
+
+const TextWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 158px;
+    margin-top: 474px`
+
+const Text = styled.h3`
+    font-family: 'TheSeasons';
+    font-size: 20px;
+    color: #424242;
+    font-weight: 400;`
