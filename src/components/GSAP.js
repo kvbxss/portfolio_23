@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 import ImgFallback from './ImgFallback'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import florayslide from '../assets/slider/floray-slide-bg.jpg'
+import mncentrumslide from '../assets/slider/mncentrum-slide-bg.jpg'
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -35,7 +37,7 @@ const GSAP = () => {
         <Gallery id='testimonials'>
            <Img src={florayslide} id='1' alt='floray slide'/>
            <Img src={florayslide} id='2' alt='floray slide'/>
-           <Img src={florayslide} id='3' alt='floray slide'/>
+           <Img src={mncentrumslide} id='3' alt='mncentrum slide'/>
            <Img src={florayslide} id='4' alt='floray slide'/>
            <Img src={florayslide} id='5' alt='floray slide'/>
         </Gallery>
@@ -61,7 +63,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 display: flex;
-overflow: hidden;
+overflow: auto;
 
 `
 const Img = styled.img`
