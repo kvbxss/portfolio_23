@@ -76,9 +76,6 @@ const ExpertisePage = () => {
                 </Element>
 
             </LineWrapper>
-        <SidebarWrapper>        
-          <Sidebar />
-          </SidebarWrapper>
           </ExpertiseContainer>
     </Expertise>
   )
@@ -154,13 +151,6 @@ const ElementTwo = styled.div`
     }
     
     `
-
-const SidebarWrapper = styled.div`
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 150px;`
 
 const ImgWFallback = styled(ImgFallback)`
     width: 120px;
