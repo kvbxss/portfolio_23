@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import styled from 'styled-components';
 import { GlobalStyle } from './GlobalStyles';
 import HomePage from './components/HomePage';
@@ -9,8 +9,21 @@ import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import particlesConfig from './components/particles-config';
 
+import Sidebar from './components/Sidebar';
+
+
+
+
+
 function App() {
-    
+
+
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
+
     const particlesInit = useCallback( async engine => {
         console.log(engine);
         await loadFull(engine);
@@ -29,6 +42,7 @@ function App() {
                 return (
                     <>
                     <Particles id='tsParticles' params={particlesConfig} init={particlesInit} loaded={particlesLoaded} />
+                    <Sidebar isOpen={isOpen} toggle={toggle}/>
                     <OuterWrapper>
                     <GlobalStyle></GlobalStyle>
                     <Wrapper>
@@ -74,7 +88,7 @@ const OuterWrapper = styled.div`
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     position: absolute;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -82,3 +96,4 @@ const OuterWrapper = styled.div`
         display: none;
     }
     `
+
