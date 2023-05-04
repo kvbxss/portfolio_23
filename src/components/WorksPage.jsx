@@ -1,13 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GlobalFonts } from '../GlobalFonts';
-import Sidebar from './Sidebar';
 import TopLine from './TopLine';
 import ImgFallback from './ImgFallback';
-import floray from '../assets/floray.webp'
-import florayF from '../assets/floray.png'
-import mncentrum from '../assets/mncentrum.webp'
-import mncentrumF from '../assets/mncentrum.jpg'
 import GSAP from './GSAP';
 
 const WorksPage = () => {
