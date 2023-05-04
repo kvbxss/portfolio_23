@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import lens from '../assets/lens.png';
-import { motion } from "framer-motion";
+
 
 
 const TopLine = () => {
