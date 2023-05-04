@@ -5,6 +5,9 @@ import TopLine from './TopLine';
 import ImgFallback from './ImgFallback';
 import GSAP from './GSAP';
 
+import worksprojects from '../assets/worksprojects.webp';
+import worksprojectsF from '../assets/worksprojects.png';
+
 const WorksPage = () => {
   return (
     <Works id="works">
@@ -13,15 +16,16 @@ const WorksPage = () => {
     <WorksWrapper>
         <GlobalFonts />
         <TitleWrapper>
+        
         <WorksTitle>
-            WORKS N PROJECTS
+            Works & Projects
+            
         </WorksTitle>
         <WorksImage>
-            
-        </WorksImage>
+            <ImgWithFallback src={worksprojects} fallback={worksprojectsF} alt='works'/>
+            </WorksImage>
         <WorksText>
-        Welcome to my WORKS section, where you can explore some of the most exciting IT frontend projects that I have worked on throughout my career. From developing user-friendly interfaces to delivering complex web applications, each project showcases my expertise in a range of frontend technologies and my commitment to delivering high-quality work.
-        </WorksText>
+        Welcome to my WORKS section, where you can explore some of the most exciting it frontend projects that I have worked on throughout my career. From developing user-friendly interfaces to delivering complex web applications, each project showcases my expertise in a range of frontend technologies and my commitment to delivering high-quality work.        </WorksText>
         </TitleWrapper>
         <SliderWrapper>
             <GSAP />
@@ -92,8 +96,6 @@ const TitleWrapper = styled.div`
     width: 25%;
     `
 
-const WorksImage = styled.div``
-
 const SliderWrapper = styled.div`
     float: left;
     display: flex;
@@ -121,10 +123,12 @@ const ScrollWrapper = styled.div`
 
 const WorksTitle = styled.h1`
       font-family: 'Playfair Display', serif;
-      font-size: 60px;
+      font-size: 90px;
       color: #E1A10B;
       font-weight: 400;
       line-height: 0.9;
+      letter-spacing: -0.05em;
+      margin-bottom: 100px;
       `
 
 
@@ -132,31 +136,28 @@ const WorksText = styled.p`
       font-family: 'Lato', sans-serif;
       font-size: 18px;
       color: #424242;
-      font-weight: 400;
-      line-height: 1.5;`
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      `
 
 
 
-const ImgWrapper = styled.div`
-    width: 250px;
-    height: 250px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-
-    transition: all 0.3s ease-in-out;
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
-    }
+const WorksImage = styled.div`
+    width: 150px;
+    height: 150px;
+    z-index: -2;
+    position: absolute;
+    margin-left: 5px;
+    margin-bottom: 200px;
     `
 
 
 const ImgWithFallback = styled(ImgFallback)`
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 50%;
-
+    filter: grayscale(90%);
     
 `
 
