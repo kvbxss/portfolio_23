@@ -127,10 +127,11 @@ const Element = styled.div`
     border-radius: 10%;
     margin-bottom: 136px;
     transition: all 0.3s ease-in-out;
-
+    filter: grayscale(90%);
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        filter: none;
     }
     `
 
@@ -144,14 +145,16 @@ const ElementTwo = styled.div`
     border-radius: 10%;
     margin-top: 136px;
     transition: all 0.3s ease-in-out;
-
+    filter: grayscale(90%);
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        filter: none;
     }
     
     `
 
 const ImgWFallback = styled(ImgFallback)`
     width: 120px;
+    
     `
