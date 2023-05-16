@@ -10,6 +10,7 @@ import { loadFull } from 'tsparticles';
 import particlesConfig from './components/particles-config';
 
 import Sidebar from './components/Sidebar';
+import AboutPage from './components/AboutPage';
 
 
 
@@ -49,6 +50,7 @@ function App() {
                         <HomePage />
                         <WorksPage/>
                         <ExpertisePage /> 
+                        <AboutPage />
                     </Wrapper>
                     </OuterWrapper> 
                     </>
